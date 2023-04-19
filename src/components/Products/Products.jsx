@@ -5,14 +5,13 @@ const Products = ({ headingText, products }) => {
     <div className="products-container">
       <div className="sec-heading">{headingText}</div>
       <div className="products">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            id={product.id}
+            product={product.attributes}
+          />
+        ))}
       </div>
     </div>
   );
