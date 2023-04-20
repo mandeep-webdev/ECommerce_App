@@ -12,6 +12,7 @@ import { Context } from '../../utils/context';
 import './Header.scss';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [showCart, setShowCart] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -27,16 +28,30 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <>
       <header className={`main-header ${scrolled ? 'sticky-header' : ''}`}>
         <div className="header-content">
           <ul className="left">
-            <li>Home</li>
+            <li
+              onClick={() => {
+                navigate('/');
+              }}
+            >
+              Home
+            </li>
             <li>About</li>
             <li>Categories</li>
           </ul>
-          <div className="center">GADGETS|STORE</div>
+          <div
+            className="center"
+            onClick={() => {
+              navigate('/');
+            }}
+          >
+            GADGETS|STORE
+          </div>
           <div className="right">
             <TbSearch
               onClick={() => {

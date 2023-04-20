@@ -19,8 +19,7 @@ const Footer = () => {
           <div className="c-item">
             <FaLocationArrow />
             <div className="text">
-              Kayaloram Rd, Punnamada, Kottankulangara, Alappuzha, Kerala,
-              688006
+              470L, opposite Kazo, Model Town, Jalandhar, Punjab 144003
             </div>
           </div>
           <div className="c-item">
