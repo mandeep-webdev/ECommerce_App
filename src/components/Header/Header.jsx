@@ -12,6 +12,7 @@ import { Context } from '../../utils/context';
 import './Header.scss';
 
 const Header = () => {
+  const { cartCount } = useContext(Context);
   const navigate = useNavigate();
   const [showCart, setShowCart] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -66,7 +67,7 @@ const Header = () => {
               }}
             >
               <CgShoppingCart />
-              <span>5</span>
+              {!!cartCount && <span>{cartCount}</span>}
             </span>
           </div>
         </div>
